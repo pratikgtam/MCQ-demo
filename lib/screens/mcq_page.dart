@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 import '../services/lesson_service.dart';
-import 'mcq_screen.dart';
+import 'mcq_question.dart';
 
 class MCQPage extends StatefulWidget {
   const MCQPage({super.key});
@@ -75,7 +75,7 @@ class _MCQPageState extends State<MCQPage> {
       orElse: () => lesson!.activities.first,
     );
 
-    return MCQScreen(activity: qcmActivity);
+    return MCQQuestion(activity: qcmActivity);
   }
 
   String _getAppBarTitle() {
